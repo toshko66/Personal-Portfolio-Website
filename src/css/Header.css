@@ -35,3 +35,49 @@ header{
     font-size: 20px;
     color: white;
 }
+
+
+
+
+@media (min-width: 576px) {
+/* Styles for medium screens */
+}
+
+@media (min-width: 768px) {
+/* Styles for large screens */
+}
+
+@media (min-width: 992px) {
+/* Styles for extra large screens */
+}
+
+@media (max-width: 1210px) {
+    #about-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header-text {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .header-image {
+        position: absolute;
+        opacity: 0.2; /* Adjust the opacity value as desired */
+        z-index: 0;
+        transform: scale(1.1);
+    }
+    .header-text p{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        color: white;
+        max-width: 900px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+    
+}
+

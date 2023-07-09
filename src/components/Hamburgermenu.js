@@ -1,28 +1,24 @@
 import React from 'react';
-import '../css/NavBar.css'
-import HamburgerMenu from './Hamburgermenu';
+import '../css/Hamburgermenu.css';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import  logo from '../assets/logo3.png';
 
+function HamburgerMenu() {
+    
+        const scrollToSection = (section) => {
+        scroll.scrollTo(section, {
+            duration: 500,
+            smooth: true,
+            offset: -80,// adjust this to match the height of your header/navbar
+        });
+        }
+  return (
+    <div className="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label className="menu__btn" htmlFor="menu__toggle">
+        <span></span>
+        </label>
 
-function NavBar( ) {
-    const scrollToSection = (section) => {
-    scroll.scrollTo(section, {
-        duration: 500,
-        smooth: true,
-        offset: -80,// adjust this to match the height of your header/navbar
-    });
-    console.log(NavBar);
-};
-
-return (
-<div className='nav-wrapper'>
-<div className='logo'>
-    <img src={logo} alt="logo" />
-    </div>
-<nav>
-    <ul>
+        <ul className="menu__box">
         <li>
             <Link
                 FontAwesomeIcon icon="fa-solid fa-grid-2" 
@@ -60,11 +56,9 @@ return (
             Contact
             </Link>
         </li>
-    </ul>
-</nav>
-<HamburgerMenu/>
-</div>
-);
+      </ul>
+    </div>
+  );
 }
 
-export default NavBar;
+export default HamburgerMenu;

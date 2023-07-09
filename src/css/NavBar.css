@@ -1,43 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
-
 /* Other CSS styles here */
-nav{
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+
+.nav-wrapper .logo img {
+  margin: 20px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  min-height: 80px;
+  align-items: center;
+  position: fixed;
+  min-width: 100%;
+  z-index: 1111111;
+}
+
+.nav-wrapper nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  gap: 140px;
+}
+
+.nav-wrapper nav ul li {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.nav-wrapper nav ul li:hover {
+  cursor: pointer;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+@media (max-width: 900px) {
+  .nav-wrapper nav ul {
+    display: none;
+  }
+
+  .nav-wrapper nav.open ul {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 80px;
+    left: 0;
     width: 100%;
-    justify-content: flex-end;
-    margin-right: 40px;
-}
+  }
 
+  .nav-wrapper nav.open ul li {
+    margin: 20px 0;
+  }
 
-.nav-wrapper .logo img{
-    margin: 20px;
-}
-
-.nav-wrapper{
-    display: flex;
-    justify-content: center;
-    min-height: 80px;
-    align-items: center;
-    position: fixed;
-    min-width: 100%;
-    z-index: 1111111;
-}
-
-.nav-wrapper nav ul{
-    display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-    gap: 140px
-}
-
-.nav-wrapper nav ul li{
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    text-transform:uppercase;
-    font-size: 20px;
-}
-
-.nav-wrapper nav ul li:hover{
-    cursor: pointer;
+  .hamburger-menu {
+    display: block;
+  }
 }
