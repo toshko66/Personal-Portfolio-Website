@@ -19,7 +19,8 @@ function About() {
     'Firebase',
     'GraphQL',
     'TypeScript',
-    'GatsbyJS',
+    'PHP',
+    'SQL',
   ];
 
   return (
